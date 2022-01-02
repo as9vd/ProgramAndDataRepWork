@@ -1,0 +1,20 @@
+C002	000		jump to beginning of loop
+3000	001		loadValue()
+3013	002		load zero
+4010	003		store it into counter
+3012	004		load size
+6010	005		sub counter
+E010	006		if this is equal to zero, jump to the end (change end)
+3010	007		load counter
+5001	008		add loadValue()
+400D	009		store updated loadValue()
+3010	00A		load counter
+5011	00B		add one
+4010	00C		store counter
+0000	00D		updated loadValue()
+1800	00E		print
+C004	00F		jump back to beginning of for loop
+0000	010		int counter (0 initially)
+0001	011		int one (1)
+0013	012		int size (change end; needs to be hardcoded)
+0000	013 	int zero

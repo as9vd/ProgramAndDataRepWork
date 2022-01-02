@@ -1,0 +1,36 @@
+C00A	000		this is courtesy of your's truly, as9vd
+0000	001		int num1
+0000	002		int num2
+0000	003		int num3
+0000	004		int sum
+0000	005		int zero
+0000	006		int counter
+0002	007		int two
+3005	008		load zero
+4004	009		store zero into the sum
+1000	00A		read num1
+4001	00B		store num1 into address 1
+1000	00C		read num2	
+4002	00D		store num2 into address 2
+1000	00E		read num3	
+4003	00F		store num3 into address 3
+3006	010		bring up the counter
+6007	011		subtract two from it
+D017	012		jump to end of loop if it equals zero
+3004	013		load the sum into the accumulator - this is where the fun begins
+5001	014		add num1
+5002	015		add num2
+5003	016		add num3
+1800	017		print
+4004	018		store the sum into address 4
+3004	019		load the sum
+8004	01A		or the sum so we can see if it is purely 0 (e.g. the sum is 0)
+D01D	01B		if all 0, then skip the shyt (goes to when printing nums begins)
+C008	01C		otherwise, if the sum is not 0, then go back to address 008
+3001	01D		load num1
+1800	01E		print num1
+3002	01F		load num2
+1800	020		print num2
+3003	021		load num3
+1800	022		print num3
+0000 	023		halt.

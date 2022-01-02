@@ -1,0 +1,91 @@
+C014	000		skip to when things actually start happening, past this variable initialisation period
+0059	001		int arrayBaseAddress (change end to its actual location later)
+0000	002		int addToArrayBase
+0000	003 	
+0000	004		int size
+0001	005		int one
+0000	006		
+0000	007		int zero
+0000	008		int input
+4000	009		storeValue()
+1800	00A		printValue()
+3000	00B		loadValue()
+3000	00C		loadValue2()
+0000	00D
+0000	00E
+0000	00F
+0000	010
+0000	011
+0000	012
+0000	013
+1000	014		read size of array	
+4004	015 	store it into size's memory address
+3004	016		load the size
+6002	017		subtract that by the addToArrayBase
+E02D	018		if that is less than zero, jump to the end of the loop (change end to its actual location later)
+D02D	019		if that equals zero, jump to the end of the loop (change end to its actual location later)
+3009	01A		load storeValue()
+5001	01B		add array base
+5002	01C		add addToArrayBase (BTEC counter)
+4022	01D		store the command further down..
+1000	01E		read input
+B000	01F		
+B000	020		
+B000	021	
+0000	022		storeValue()
+B000	023		
+3002	024		load addToArrayBase
+5005	025		increment that sh*
+4002	026		save the new value
+C016	027		jump back to beginning of loop
+B000	028		
+B000	029		
+B000	02A		
+B000	02B		____________________________________
+3007	02C		load zero.	
+4002	02D		turn addToArrayBase into 0 too.
+3004	02E		load size
+6002	02F		subtract that by the addToArrayBase
+E040	030		if that is less than zero, jump to the end of the loop (change end to its actual location later)
+D040	031		if that equals zero, jump to the end of the loop (change end to its actual location later)
+300B	032		load loadValue();
+5001	033		add array base
+5002	034		add addToArrayBase (BTEC counter)
+403A	035		store command further down..
+B000	036 	
+B000	037
+B000	038
+B000	039
+0000	03A		loadValue()
+1800	03B		print this beautiful value
+3002	03C		load addToArrayBase
+5005	03D		increment that sh*
+4002	03E		save the new value
+C02E	03F		jump back to beginning of loop
+B000	040		____________________________________
+B000	041
+B000	042		
+B000	043
+3002	044		load addToArrayBase
+D055	045		if that equals zero, jump to the end of the loop (change end to its actual location later)
+300C	046		load loadValue2()
+5001	047		add array base
+5002	048		add addToArrayBase (BTEC counter)
+6005	049		subtract one
+404F	04A		store command further down...
+B000	04B 	
+B000	04C
+B000	04D
+B000	04E
+0000	04F		loadValue2()
+1800	050		print this beautiful value
+3002	051		load addToArrayBase
+6005	052		decrement that sh*
+4002	053		save the new value
+C044	054		jump back to beginning of loop
+0000	055		
+0000	056
+0000	057
+0000	058
+0000	059
+0000	05A		array base

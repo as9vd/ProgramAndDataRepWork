@@ -1,0 +1,5 @@
+lifecycle.questions.txt
+August 31st, 2021
+Asadbek Shamsiev, as9vd@virginia.edu
+
+What does the "ostream& operator<<" function do? Why is the return type ostream&, what is ostream&, and why are there two less than signs before the parameter parentheses?

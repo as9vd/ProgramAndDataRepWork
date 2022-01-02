@@ -1,0 +1,36 @@
+\hypertarget{middleearth_8h_source}{}\doxysection{middleearth.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MIDDLEEARTH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MIDDLEEARTH\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{comment}{// see the comments in the lab11 write-\/up, or in middleearth.cpp}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_middle_earth}{MiddleEarth}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_middle_earth}{MiddleEarth}}(\textcolor{keywordtype}{int} xsize, \textcolor{keywordtype}{int} ysize, \textcolor{keywordtype}{int} num\_cities, \textcolor{keywordtype}{int} seed);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} printTable();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{float} getDistance(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& city1, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& city2);}
+\DoxyCodeLine{20     vector<string> getItinerary(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} num\_city\_names, xsize, ysize;}
+\DoxyCodeLine{24     unordered\_map<string, float> xpos, ypos;}
+\DoxyCodeLine{25     vector<string> cities;}
+\DoxyCodeLine{26     unordered\_map<string, unordered\_map<string, float>> distances;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     mt19937 gen; \textcolor{comment}{// Mersenne-\/Twister random number engine}}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

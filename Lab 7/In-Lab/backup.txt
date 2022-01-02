@@ -1,0 +1,78 @@
+B000	030
+3005	031		load counter
+6008	032		subtract one
+4006	033		store this into dCounter. should be 9
+300D	034		load zero
+4005	035		store counter
+B000	036		______________________________________________
+B000	037
+3004	038		load size (10); we will subtract this by the counter (int i) each time
+6005	039		subtract counter
+D079	03A		jump to end of the entire loop if the difference is equal to zero (change end)
+B000	03B		______________________________________________
+B000	03C 	___________________________
+3006	03D		load dCounter (9 initially)
+6005	03E		sub counter (int i; changes with each iteration)
+D070	03F		jump to end of the inner loop if this shit is equal to zero (change end)
+B000	040		___________________________
+3002	041		load arrayBaseAddress
+5006	042		add dCounter
+5011	043		add loadValue1()
+4047	044		store the loadValue command below
+B000	045		
+B000	046		
+0000	047		loadValue1() -- loads the last element in the array initially
+4007	048		store it in temp1
+B000	049
+3002	04A		load arrayBaseAddress
+5006	04B		add dCounter
+6008	04C		sub one
+5011	04D		add loadValue1()
+4051	04E		store the loadValue command below
+B000	04F
+B000	050
+0000	051		loadValue1() -- loads the 2nd to last element in the array initially
+4009	052		store it in temp2
+B000	053		
+3009	054		load temp2
+6007	055		sub temp1 -- this is where we check if the sh** is equal to zero
+D06B	056		jump past these below commands where the swapping occurs if a[8] is rightfully less than a[9]
+B000	057		__		(THIS IS WHERE THE SWAPPING OCCURS)
+3007	058		load temp1
+400A	059		store into temp3
+3010	05A		load storeValue()
+5002	05B		add arrayBaseAddress
+5006	05C		add dCounter
+6008	05D		sub one -- we are storing the smaller value at a smaller index
+4061	05E		store the value down below..
+300A	05F		load temp3
+B000	060
+0000	061		storeValue()
+B000	062
+3010	063		load storeValue()
+5002	064		add arrayBaseAddress
+5006	065		add dCounter
+4069	066		store the value down below..
+3009	067		load temp2
+B000	068
+0000	069		storeValue() -- here, we have officially switched 
+B000	06A		___________________________
+3006	06B		load dCounter		
+6008	06C		sub one
+4006	06D		store dCounter -- we have successfully decremented this shit
+C03D	06E		jump back to beginning of inner loop
+B000	06F 	___________________________
+B000	070		______________________________________________
+3005	071		load counter
+5008	072		add one
+4005	073		store counter
+C038	074		jump back to beginning of total loop (change end)
+3004	075		load ten
+6008	076		sub one
+4006	077		store into dCounter -- we reset this shit everytime we're in the outer loop.
+B000	078 	______________________________________________ we outchea
+B000	079
+B000	07A
+B000	07B
+B000	07C
+B000	07D

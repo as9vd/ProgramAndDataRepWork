@@ -1,0 +1,12 @@
+load counter
+sub one
+store dCounter
+load zero
+store counter
+	
+	load dCounter
+	sub counter
+	jmpe [end of loop]
+	load dCounter
+	sub counter
+	jmpe [end of inner loop]

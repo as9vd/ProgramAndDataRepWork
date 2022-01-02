@@ -1,0 +1,144 @@
+C017	000		jump to start of sh** (change end)
+0000	001		int input
+008F	002		int arrayBaseAddress (change end)
+0000	003		int arrayIncrementer
+000A	004		int ten
+0000	005		int counter
+0009	006		int dCounter
+0000	007		int temp1
+0001	008		int one
+0000	009		int temp2
+0000	00A 	int temp3 (temp for temporarily storing when changing sh**)
+0000	00B		int temp4 (temp for temporarily storing when changing sh** (2))
+B000	00C
+0000	00D		int zero
+0000	00E		
+B000	00F
+4000	010		storeValue()
+3000	011		loadValue1()
+3000	012		loadValue2() (1/4)
+B000	013
+B000	014
+B000	015
+B000	016
+3004	017		load ten
+6005	018		subtract the counter
+D02D	019		if the difference == 0, jump to end of loop (change end)
+B000	01A		
+B000	01B		
+3010	01C		load storeValue()
+5002	01D		add arrayBaseAddress
+5003	01E		add arrayIncrementer
+4024	01F		store the sh** down below..
+1000	020		read input
+4001	021		store the input
+B000	022
+B000	023
+0000	024		storeValue()
+3003	025		load arrayIncrementer
+5008	026		add one to arrayIncrementer
+4003	027		store arrayIncrementer
+3005	028		load counter
+5008	029		add one
+4005	02A		store counter
+C017	02B		jump back to beginning (2/4)
+B000	02C		___________________________
+B000	02D
+B000	02E
+B000	02F
+B000	030
+3005	031		load counter
+6008	032		subtract one
+4006	033		store this into dCounter. should be 9
+300D	034		load zero
+4005	035		store counter
+B000	036		______________________________________________
+B000	037
+3004	038		load size (10); we will subtract this by the counter (int i) each time
+6005	039		subtract counter
+D079	03A		jump to end of the entire loop if the difference is equal to zero (change end)
+B000	03B		______________________________________________
+B000	03C 	___________________________
+3006	03D		load dCounter (9 initially)
+6005	03E		sub counter (int i; changes with each iteration)
+D070	03F		jump to end of the inner loop if this shit is equal to zero (change end)
+B000	040		___________________________
+3002	041		load arrayBaseAddress
+5006	042		add dCounter
+5011	043		add loadValue1()
+4047	044		store the loadValue command below
+B000	045		
+B000	046		
+0000	047		loadValue1() -- loads the last element in the array initially
+4007	048		store it in temp1
+B000	049
+3002	04A		load arrayBaseAddress
+5006	04B		add dCounter
+6008	04C		sub one
+5011	04D		add loadValue1()
+4051	04E		store the loadValue command below
+B000	04F
+B000	050
+0000	051		loadValue1() -- loads the 2nd to last element in the array initially
+4009	052		store it in temp2
+B000	053		
+3009	054		load temp2
+6007	055		sub temp1 -- this is where we check if the sh** is equal to zero
+E06B	056		jump past these below commands where the swapping occurs if a[8] is rightfully less than a[9]
+B000	057		__		(THIS IS WHERE THE SWAPPING OCCURS)
+3007	058		load temp1
+400A	059		store into temp3
+3010	05A		load storeValue()
+5002	05B		add arrayBaseAddress
+5006	05C		add dCounter
+6008	05D		sub one -- we are storing the smaller value at a smaller index
+4061	05E		store the value down below..
+300A	05F		load temp3
+B000	060
+0000	061		storeValue()
+B000	062
+3010	063		load storeValue()
+5002	064		add arrayBaseAddress
+5006	065		add dCounter
+4069	066		store the value down below..
+3009	067		load temp2
+B000	068
+0000	069		storeValue() -- here, we have officially switched 
+B000	06A		___________________________
+3006	06B		load dCounter		
+6008	06C		sub one
+4006	06D		store dCounter -- we have successfully decremented this shit
+C03D	06E		jump back to beginning of inner loop
+B000	06F 	___________________________
+B000	070		______________________________________________
+3005	071		load counter
+5008	072		add one
+4005	073		store counter
+B000	074		
+3004	075		load ten
+6008	076		sub one
+4006	077		store into dCounter -- we reset this shit everytime we're in the outer loop.
+C038	078 	jump back to beginning of total loop (change end) (3/4)
+B000	079		______________________________________________
+B000	07A
+B000	07B
+300D	07C		load zero.	
+4003	07D		turn arrayIncrementer into 0 too.
+3004	07E		load size/ten
+6003	07F		subtract that by the arrayIncrementer
+D08D	080		if that equals zero, jump to the end of the loop (change end)
+3011	081		load loadValue();
+5002	082		add array base
+5003	083		add arrayIncrementer (BTEC counter)
+4087	084		store command further down..
+B000	085
+B000	086
+0000	087		loadValue()
+1800	088		print this beautiful value
+3003	089		load arrayIncrementer
+5008	08A		increment that sh*
+4003	08B		save the new value
+C07E	08C		jump back to beginning of loop
+B000	08D
+B000	08E
+B000	08F
